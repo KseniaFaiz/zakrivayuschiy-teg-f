@@ -13,10 +13,10 @@
     --font-weight-bold: 700;
 
       /* Ширина контейнера header */
-  --header-min-width: 371px;
-  --header-max-width: 696px;
+    --header-min-width: 371px;
+    --header-max-width: 696px;
 
   
-  /* цвет фона под карточками */
-  --background-color-page: #fff; 
-  }
+    /* цвет фона под карточками */
+    --background-color-page: #fff;
+    }

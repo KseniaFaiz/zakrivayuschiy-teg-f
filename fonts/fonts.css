@@ -15,9 +15,8 @@
     local("Inter"),
     url(../fonts/Inter-Variable.woff2) format("woff2 supports variations");
   font-display: swap;
-  font-weight: 400 700;
+  font-weight: 400 700 785;
   font-style: normal;
-  font-display: swap;
 }
 
 .page {

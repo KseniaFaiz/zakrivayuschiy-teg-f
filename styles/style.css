@@ -37,12 +37,15 @@
   background-color: var(--background-color-page);
   gap: clamp(12px, 3vw, 20px);
   box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 1);
+  padding: (7.5rem, 7.1479rem + 1.5023vw, 8rem) 0
+    clamp(7.5rem, 7.1479rem + 1.5023vw, 8rem);
 }
 
 .header_logo {
   font-family: var(--font-accent);
   font-weight: 400;
-  font-size: clamp(49px, 6vw, 60px);
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   line-height: 1;
   text-transform: uppercase;
   display: flex;
@@ -54,7 +57,8 @@
 .header_text {
   font-family: var(--font-accent);
   font-weight: 400;
-  font-size: clamp(14px, 3vw, 23px);
+  /* пробую сделать резиновый размер шрифта) 
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem); */
   line-height: 1;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -63,10 +67,34 @@
 }
 
 .card-image {
-  aspect-ratio: 1 / 1;
-  background-image: url(../images/image.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.lable {
+  position: absolute;
+  inset-block-start: 25px;
+  inset-inline-end: 25px;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  color: rgb(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.lable {
+  text-shadow: 1px 1px 0.5px rgb(255, 255, 255, 0.5);
+ }
+
+@supports (
+  (text-stroke: 1px rgb(255, 255, 255, 0.5)) or
+    (-webkit-text-stroke: 1px rgb(255, 255, 255, 0.5))
+) {
+  .lable {
+    -webkit-text-stroke: 1px rgb(255, 255, 255, 0.5);
+    text-stroke: 1px rgb(255, 255, 255, 0.5);
+    text-shadow: none;
+  }
 }
 
 .section {
@@ -74,6 +102,10 @@
   border: 2px solid black;
   max-width: clamp(var(--header-min-width), 90vw, var(--header-max-width));
   margin-block-end: 52px;
+}
+
+.decor-lable {
+  position: relative;
 }
 
 .card-text_title {
@@ -143,6 +175,6 @@
   height: 55px;
 }
 
- .footer {
+.footer {
   margin-block-end: 100px;
- }
+}
