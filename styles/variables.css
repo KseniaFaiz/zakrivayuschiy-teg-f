@@ -1,1 +1,22 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    /* Имена шрифтов */
+    --font-main: 'Inter', system-ui, sans-serif;
+    --font-accent: 'PressStart2P', monospace;
+  
+    /* размер шрифта для заголовка карточек*/
+    --font-size-card_title: 18px;
+
+
+    /* Веса шрифта для Inter */
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+      /* Ширина контейнера header */
+  --header-min-width: 371px;
+  --header-max-width: 696px;
+
+  
+  /* цвет фона под карточками */
+  --background-color-page: #fff; 
+  }
