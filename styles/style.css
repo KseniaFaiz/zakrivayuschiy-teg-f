@@ -24,6 +24,52 @@
   background-size: cover;
 }
 
+dialog {
+  font-family: var(--font-accent);
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--background-color-page);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  max-width: 500px;
+  width: 90vw;
+}
+
+dialog[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  max-width: 353px; /* Ширина согласно изображению */
+  width: 90vw; /* Адаптивность для мобильных устройств */
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  transition: opacity 0.3s ease;
+}
+
+/* Содержимое модального окна — две колонки */
+.modal-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.modal-floppy {
+  flex: 1;
+  text-align: left;
+}
+
+.modal-text {
+  flex: 1;
+  text-align: right;
+}
+
 .header {
   display: flex;
   flex-direction: column;

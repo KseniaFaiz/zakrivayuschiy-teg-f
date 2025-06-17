@@ -13,6 +13,35 @@
     <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./images/favicon.svg" />
   </head>
+  <!-- <dialog id="save-dialog">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+      <use href="./svg/floppy.svg#floppy"></use>
+    </svg>
+    <span>Вставьте дискету, чтобы продолжить</span>
+  <button class="card__icon-button" type="button" onclick="document.getElementById('save-dialog').close()">
+    <span class="card__like-button button__text">OK</span>
+  </button>
+  </dialog> -->
+  <dialog id="save-dialog">
+    <div class="modal-content">
+      <div class="modal-floppy">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+          <use href="./svg/floppy.svg#floppy"></use>
+        </svg>
+      </div>
+            <div class="modal-text">
+        <span>Вставьте дискету, чтобы продолжить</span>
+      </div>
+    </div>
+    <!-- Кнопка OK -->
+    <button
+      class="card__icon-button"
+      type="button"
+      onclick="document.getElementById('save-dialog').close()"
+    >
+      <span class="card__like-button button__text">OK</span>
+    </button>
+  </dialog>
   <body class="page">
     <symbol id="disketa">
       <use href="./svg/floppy.svg"></use>
@@ -324,7 +353,11 @@
       </article>
     </main>
     <footer class="footer">
-      <button class="button_save">
+      <button
+        class="button_save"
+        type="button"
+        onclick="document.getElementById('save-dialog').showModal()"
+      >
         <svg width="28" height="28" viewBox="0 0 40 40">
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
