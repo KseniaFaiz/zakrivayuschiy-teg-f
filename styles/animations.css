@@ -9,3 +9,82 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+@keyframes like-zoom {
+  0% {
+    scale: 1;
+  }
+
+  95% {
+    scale: 1.25;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes like-sparks {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.sparks {
+  opacity: 0;
+}
+
+/* Общие стили для всех частей */
+.contour,
+.main-body,
+.core {
+  transition-property: fill;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.core {
+  fill: none;
+  transition: fill 0.03s ease-in-out 0.3s;
+}
+
+.like-icon:hover .core {
+  fill: var(--contour-color);
+}
+
+.like-icon:not(:hover) .core {
+  fill: none;
+  transition-delay: 0.03s; /* Задержка при уходе */
+}
+
+.like-icon:active .core {
+  fill: var(--animation-fill-color);
+}
+
+.contour {
+  fill: var(--contour-color); 
+  transition: fill 0.05s ease-in-out 0.3s;
+}
+
+.main-body {
+  fill: none;
+  transition: fill 0.05s ease 0.3s;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--contour-color);
+  transition: fill 0.3s ease 0.05s;
+}
+
+
+.like-icon:not(:hover) .main-body {
+  fill: none;
+  transition: fill 0s ease 0.3s; /* Задержка при уходе*/
+}
+
+.like-icon:active .main-body {
+  fill: var(--animation-fill-color);
+} 

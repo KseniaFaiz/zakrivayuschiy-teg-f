@@ -108,9 +108,9 @@ dialog button {
 }
 
 .card-image {
-  min-width: 100%;
-  min-height: 100%;
+  inline-size: clamp(371px, 700px, 100%);
   object-fit: cover;
+  aspect-ratio: 1 / 1;
 }
 
 .card-image_0sprint {
@@ -118,7 +118,7 @@ dialog button {
 }
 
 .card-image_1sprintnull {
-  filter:blur(20px);
+  filter: blur(7px);
 }
 
 .card-image_1sprintif {
@@ -138,7 +138,7 @@ dialog button {
 }
 
 .card-image_3sprinthands {
-  filter: hue-rotate(90deg);
+  filter: hue-rotate(323deg);
 }
 .card-image_imhere {
   filter: brightness(5) blur(1px);
@@ -177,7 +177,9 @@ dialog button {
 }
 
 .decor-lable {
-  position: relative;
+   position: relative;
+  border-block-end: 2px solid var(--contour-color);
+  max-height: 697px;
 }
 
 .card-text_title {
@@ -229,9 +231,9 @@ dialog button {
   background-color: #fff;
   padding: 0px;
   gap: 6px;
-    cursor: pointer;
-  transition: border-color 0.3s ease-in-out;
-  border: 2px solid transparent;
+  cursor: pointer;
+  /* transition: border-color 0.3s ease-in-out;
+  border: 2px solid transparent; */
 }
 
 .card__icon-button:focus {
@@ -245,6 +247,7 @@ dialog button {
 .like-icon {
   max-width: clamp(25px, 25px, 40px);
   max-height: clamp(25px, 25px, 40px);
+  /* transition: fill 4s ease 4s; */
 }
 
 .heart {
@@ -255,48 +258,19 @@ dialog button {
   opacity: 0%;
 }
 /* Базовые стили */
-.contour,
-.main-body,
-.core {
-  transition-property: fill;
-  will-change: fill;
+.like-icon:focus {
+  outline: none;
 }
 
-/* Сердцевина — моментальная реакция при наведении */
-.core {
-  fill: none;
-  transition-duration: 0.3s;
-  transition-delay: 0s;
+.card__icon-button:focus {
+  outline: none;
 }
 
-.card__icon-button:hover .core {
-  fill: var(--contour-color);
-  transition-delay: 0s;
+.card__icon-button:focus-visible {
+  max-height: 38px;
+  border: 2px solid black;
+  border-radius: 0%;
 }
-
-.card__icon-button:not(:hover) .core {
-  fill: none;
-  transition-delay: 0.03s; /* Задержка при уходе */
-}
-
-/* Основное тело — срабатывает чуть позже при наведении */
-.main-body {
-  fill: none;
-  transition-duration: 0.3s;
-  transition-delay: 0.05s;
-}
-
-.card__icon-button:hover .main-body {
-  fill: var(--contour-color);
-  transition-delay: 0.05s;
-}
-
-.card__icon-button:not(:hover) .main-body {
-  fill: none;
-  transition-delay: 0s; /* Без задержки при уходе */
-}
-
-
 
 .double_button {
   display: flex;
@@ -356,31 +330,17 @@ dialog button {
   margin: auto;
   background-color: white;
   gap: 9px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 19px;
-    gap: 10px;
-    width: auto;
-}
-
-.button_save-down {
-  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  margin: 0px 32px clamp(6.3rem, 0.6769rem - 1.8451vw, 1rem);
-  font-family: var(--font-accent);
-  font-size: 14px;
-  background-color: var(--background-color-page);
-  width: 335px;
-  height: 55px;
-  color: black;
+  justify-content: center;
+  padding: 15px 19px;
+  gap: 10px;
+  width: auto;
 }
 
-.button_save svg {
-  color: black;
+.icon-floppy {
   mix-blend-mode: difference;
+  color: white;
 }
 
 /* Чтобы текст был поверх анимированного фона */
