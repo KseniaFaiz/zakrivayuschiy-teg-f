@@ -1,22 +1,40 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    /* Имена шрифтов */
-    --font-main: 'Inter', system-ui, sans-serif;
-    --font-accent: 'PressStart2P', monospace;
+  /* Имена шрифтов */
+  --font-main: "Inter", system-ui, sans-serif;
+  --font-accent: "PressStart2P", monospace;
+
+  /* размер шрифта для заголовка карточек*/
+  --font-size-card_title: 18px;
+
+  /* Веса шрифта для Inter */
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* Ширина контейнера header */
+  --header-min-width: 371px;
+  --header-max-width: 696px;
+
+  /* цвет фона под карточками */
+  --background-color-page: #fff;
+
+  --contour-color: black;
+  --animation-fill-color: red;
   
-    /* размер шрифта для заголовка карточек*/
-    --font-size-card_title: 18px;
-
-
-    /* Веса шрифта для Inter */
-    --font-weight-normal: 400;
-    --font-weight-bold: 700;
-
-      /* Ширина контейнера header */
-    --header-min-width: 371px;
-    --header-max-width: 696px;
-
-  
-    /* цвет фона под карточками */
-    --background-color-page: #fff;
-    }
+  /* градиент для фона */
+  --background-gradient: repeating-linear-gradient(
+      to right,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 1%, #1a1a1a 100%);
+}
