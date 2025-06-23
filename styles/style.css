@@ -177,9 +177,9 @@ dialog button {
 }
 
 .decor-lable {
-   position: relative;
-  border-block-end: 2px solid var(--contour-color);
-  max-height: 697px;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  height: 100%;
 }
 
 .card-text_title {
@@ -190,6 +190,7 @@ dialog button {
   padding-block-end: 6px;
   padding-inline: 10px;
   text-wrap: wrap;
+  border-block-end: 2px solid black;
 }
 
 .card-text {
@@ -305,9 +306,10 @@ dialog button {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: black;
+  background-color: white;
   transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
+  mix-blend-mode: difference;
 }
 
 .button:hover::before {
@@ -335,12 +337,11 @@ dialog button {
   justify-content: center;
   padding: 15px 19px;
   gap: 10px;
-  width: auto;
+  width: 100%;
 }
 
 .icon-floppy {
   color: white;
-  mix-blend-mode: difference;
   flex-shrink: 0;
 }
 
@@ -352,12 +353,10 @@ dialog button {
 
 .button_save .button__text {
   position: relative;
-  z-index: 3;
+  z-index: 1;
 }
-
 
 .footer {
   margin-block-end: 100px;
   z-index: 1;
 }
-
