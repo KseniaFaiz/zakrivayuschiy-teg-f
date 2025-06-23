@@ -110,7 +110,7 @@ dialog button {
 .card-image {
   inline-size: clamp(371px, 700px, 100%);
   object-fit: cover;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1/1;
 }
 
 .card-image_0sprint {
@@ -245,8 +245,8 @@ dialog button {
 }
 
 .like-icon {
-  max-width: clamp(25px, 25px, 40px);
-  max-height: clamp(25px, 25px, 40px);
+  /* max-width: clamp(25px, 25px, 40px);
+  max-height: clamp(25px, 25px, 40px); */
   /* transition: fill 4s ease 4s; */
 }
 
@@ -339,8 +339,9 @@ dialog button {
 }
 
 .icon-floppy {
-  mix-blend-mode: difference;
   color: white;
+  mix-blend-mode: difference;
+  flex-shrink: 0;
 }
 
 /* Чтобы текст был поверх анимированного фона */
@@ -351,9 +352,12 @@ dialog button {
 
 .button_save .button__text {
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
+
 
 .footer {
   margin-block-end: 100px;
+  z-index: 1;
 }
+

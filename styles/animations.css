@@ -42,13 +42,13 @@
 .main-body,
 .core {
   transition-property: fill;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
+  transition-duration: 0.03s;
+  transition-timing-function: ease-in-out;
 }
 
 .core {
-  fill: none;
-  transition: fill 0.03s ease-in-out 0.3s;
+  fill: transparent;
+  transition: fill 0.3s ease-in-out 0.03s;
 }
 
 .like-icon:hover .core {
@@ -56,8 +56,8 @@
 }
 
 .like-icon:not(:hover) .core {
-  fill: none;
-  transition-delay: 0.03s; /* Задержка при уходе */
+  fill: transparent;
+  transition: fill 0.05s ease-in-out 0.3s; /* Задержка при уходе */
 }
 
 .like-icon:active .core {
@@ -65,26 +65,25 @@
 }
 
 .contour {
-  fill: var(--contour-color); 
+  fill: var(--contour-color);
   transition: fill 0.05s ease-in-out 0.3s;
 }
 
 .main-body {
-  fill: none;
-  transition: fill 0.05s ease 0.3s;
+  fill: transparent;
+  transition: fill 0.05s ease-in-out 0s;
 }
 
 .like-icon:hover .main-body {
   fill: var(--contour-color);
-  transition: fill 0.3s ease 0.05s;
+  transition: fill 0.3s ease-in-out 0.05s;
 }
 
-
 .like-icon:not(:hover) .main-body {
-  fill: none;
-  transition: fill 0s ease 0.3s; /* Задержка при уходе*/
+  fill: transparent;
+  transition: fill 0s ease-in-out 0.3s; /* Задержка при уходе*/
 }
 
 .like-icon:active .main-body {
   fill: var(--animation-fill-color);
-} 
+}
