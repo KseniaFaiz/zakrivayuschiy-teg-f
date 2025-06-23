@@ -196,10 +196,13 @@ dialog button {
 .card-text {
   display: flex;
   flex-direction: column;
-  margin-block: 25px;
-  margin-inline: 25px;
   gap: 25px;
+  margin: 25px;
 }
+
+.card-text_lesson {
+}
+
 
 .card__like-button {
   display: flex;
@@ -277,7 +280,6 @@ dialog button {
   display: flex;
   justify-content: space-between;
   align-self: flex-end;
-  width: 169px;
   gap: 12px;
   align-items: center;
 }
