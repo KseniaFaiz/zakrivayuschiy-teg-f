@@ -13,11 +13,10 @@
   font-family: "Inter";
   src:
     local("Inter"),
-url('/fonts/Inter-Variable.woff2') format('woff2-variations'),
-        url('/fonts/Inter-Variable.woff2') format('woff2') supports variations;
-    font-display: swap;
+    url("/fonts/Inter-Variable.woff2") format("woff2") supports variations;
   font-weight: 400 700 785;
   font-style: normal;
+  font-display: swap;
 }
 
 .page {

@@ -79,8 +79,7 @@ dialog button {
   gap: clamp(12px, 3vw, 20px);
   box-sizing: border-box;
   border: 2px solid rgba(0, 0, 0, 1);
-  padding: (7.5rem, 7.1479rem + 1.5023vw, 8rem) 0
-    clamp(7.5rem, 7.1479rem + 1.5023vw, 8rem);
+  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8rem) 0;
 }
 
 .header_logo {
@@ -98,13 +97,11 @@ dialog button {
 .header_text {
   font-family: var(--font-accent);
   font-weight: 400;
-  /* пробую сделать резиновый размер шрифта) 
-  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem); */
+  font-size: clamp(14px, 2.5vw + 1rem, 23px);
   line-height: 1;
   letter-spacing: 0;
   text-transform: uppercase;
   text-align: center;
-  font-size: var(--font-size-card_title);
 }
 
 .card-image {
@@ -152,9 +149,6 @@ dialog button {
   font-size: 14px;
   color: rgb(0, 0, 0, 0.5);
   z-index: 1;
-}
-
-.lable {
   text-shadow: 1px 1px 0.5px rgb(255, 255, 255, 0.5);
 }
 
@@ -200,10 +194,6 @@ dialog button {
   margin: 25px;
 }
 
-.card-text_lesson {
-}
-
-
 .card__like-button {
   display: flex;
   justify-content: center;
@@ -246,12 +236,6 @@ dialog button {
 
 .card__icon-button:focus-visible {
   border-color: black; /* Акцентный цвет обводки */
-}
-
-.like-icon {
-  /* max-width: clamp(25px, 25px, 40px);
-  max-height: clamp(25px, 25px, 40px); */
-  /* transition: fill 4s ease 4s; */
 }
 
 .heart {
@@ -330,7 +314,7 @@ dialog button {
 
 .button_save {
   display: flex;
-  padding: 15px 20px 14px;
+  /* padding: 15px 20px 14px; */
   margin: auto;
   background-color: white;
   gap: 9px;
