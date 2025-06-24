@@ -20,7 +20,7 @@
 
   --contour-color: black;
   --animation-fill-color: red;
-  
+
   /* градиент для фона */
   --background-gradient: repeating-linear-gradient(
       to right,
@@ -38,3 +38,4 @@
     ),
     linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 1%, #1a1a1a 100%);
 }
+
