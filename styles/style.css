@@ -246,8 +246,8 @@ dialog button {
   opacity: 0%;
 }
 
-.like-icon {
-}
+/* .like-icon {
+} */
 
 /* Базовые стили */
 .like-icon:focus {
@@ -321,7 +321,6 @@ dialog button {
   /* padding: 15px 20px 14px; */
   margin: auto;
   background-color: white;
-  gap: 9px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
