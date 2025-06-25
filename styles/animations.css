@@ -22,9 +22,12 @@
     scale: 1;
   }
 } */
+.sparks {
+  opacity: 0;
+}
 
 .is-liked .sparks {
-  animation: sparks-flash 0.3s ease-in 0.3s forwards;
+  animation: sparks-flash 0.3s ease-in 0.3s;
 }
 
 @keyframes sparks-flash {
@@ -41,8 +44,7 @@
 
 /* Анимация масштабирования при is-liked */
 .is-liked .heart {
-  animation: heart-scale 0.3s ease-in 0.1s forwards,
-    heart-return 0.3s ease-out 0.4s forwards;
+  animation: heart-scale 0.3s ease-in 0.1s;
 }
 
 /* Ключевые кадры для масштабирования */
@@ -55,30 +57,6 @@
   }
 }
 
-/* Ключевые кадры для возврата */
-@keyframes heart-return {
-  from {
-    transform: scale(1.25);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes sparks {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.sparks {
-  opacity: 0;
-}
-
 /* Общие стили для всех частей */
 /* .contour,
 .main-body,
@@ -88,61 +66,52 @@
   transition-timing-function: ease-in-out;
 } */
 
+.contour {
+  fill: var(--contour-color);
+  transition: fill 0.1s ease;
+}
+
 .core {
   fill: transparent;
-  transition: fill 0.3s ease-in-out 0.03s;
+  transition: fill 0.3s ease 0.03s;
 }
 
 .like-icon:hover .core {
   fill: var(--contour-color);
-}
-
-.like-icon:not(:hover) .core {
-  fill: transparent;
-  transition: fill 0.05s ease-in-out 0.3s; /* Задержка при уходе */
+  transition: fill 0.3s ease;
 }
 
 .like-icon:active .core {
   fill: var(--animation-fill-color);
-}
-
-.contour {
-  fill: var(--contour-color);
-  transition: fill 0.05s ease-in-out 0.3s;
+  transition: fill 0.3s ease;
 }
 
 .main-body {
   fill: transparent;
-  transition: fill 0.05s ease-in-out 0s;
+  transition: fill 0.3s ease;
 }
 
 .like-icon:hover .main-body {
   fill: var(--contour-color);
-  transition: fill 0.3s ease-in-out 0.05s;
-}
-
-.like-icon:not(:hover) .main-body {
-  fill: transparent;
-  transition: fill 0s ease-in-out 0.3s; /* Задержка при уходе*/
+  transition: fill 0.3s ease 0.05s;
 }
 
 .like-icon:active .main-body {
   fill: var(--animation-fill-color);
-  transition: fill 0.3s ease-in-out 0.3s;
+  transition: fill 0.3s ease 0.03s;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--animation-fill-color);
-  transition: fill 0.3s ease-in-out 0.06s;
+  transition: fill 0.3s ease 0.06s;
 }
 
 .like-icon.is-liked .core {
   fill: var(--animation-fill-color);
-  transition: fill 0.3s ease-in-out 0.3s;
+  transition: fill 0.3s ease;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--animation-fill-color);
-  transition: fill 0.3s ease-in-out 0.3s;
+  transition: fill 0.3s ease 0.03s;
 }
-

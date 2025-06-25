@@ -11,27 +11,25 @@
 */
 
 .page {
-  /* font-family: var(--font-main); */
-  /* font-variation-settings: "wght" var(--font-weight-normal); */
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-inline-size: 371px;
+  min-inline-size: 375px;
   min-block-size: 100dvb;
   background-image: var(--background-gradient);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; /* Фон не скроллится отдельно */
   min-height: 100vh; /* Занимает минимум высоту экрана */
+  font-family: var(--font-main);
+  font-variation-settings: "wght" var(--font-weight-normal);
 }
 
 dialog {
   font-family: var(--font-accent);
   padding: 0;
-  border: none;
-  border-radius: 8px;
+  border: 2px solid var(--contour-color);
   background-color: var(--background-color-page);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   max-width: 500px;
   width: 90vw;
 }
@@ -47,16 +45,14 @@ dialog[open] {
 }
 
 dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(2px);
-  transition: opacity 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .modal-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  inline-size: 100%;
   gap: 20px;
 }
 
@@ -72,21 +68,21 @@ dialog button {
   justify-content: center;
   width: 100%;
   max-width: clamp(var(--header-min-width), 90vw, var(--header-max-width));
-  min-height: clamp(323px, 11.35vw, 364px);
-  margin-block-start: 100px;
-  margin-block-end: 100px;
+  margin-block-start: 102px;
+  margin-block-end: 102px;
   background-color: var(--background-color-page);
   gap: 20px;
   box-sizing: border-box;
-  border: 2px solid rgba(0, 0, 0, 1);
-  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8rem) 0;
+  outline: 2px solid rgba(0, 0, 0, 1);
+  padding-block-end: 128px;
+  padding-block-start: 128px;
 }
 
 .header_logo {
   font-family: var(--font-accent);
   font-weight: 400;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  line-height: 1;
+  line-height: 100%;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -97,8 +93,7 @@ dialog button {
 .header_text {
   font-family: var(--font-accent);
   font-weight: 400;
-  font-size: clamp(14px, 0.85vw + 0.6rem, 23px);
-  line-height: 1;
+  font-size: clamp(14px, 1.1vw + 0.8rem, 23px);
   letter-spacing: 0;
   text-transform: uppercase;
   text-align: center;
@@ -143,56 +138,70 @@ dialog button {
 
 .lable {
   position: absolute;
-  inset-block-start: 25px;
   inset-inline-end: 25px;
   font-family: var(--font-accent);
   font-size: 14px;
-  color: rgb(0, 0, 0, 0.5);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: #0000;
+  text-shadow: 1px 1px 0.5px white;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
   z-index: 1;
-  text-shadow: 1px 1px 0.5px rgb(255, 255, 255, 0.5);
+  inset-block-start: 25px;
+  inset-inline-end: 25px;
+  /* inset-block-start: 25px;
+  inset-inline-end: 25px;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  color: white; 
+  z-index: 1;
+  /* text-shadow: 1px 1px 0.5px white; 
+  opacity: 0.5;
+  mix-blend-mode: hard-light; */
 }
 
-@supports (
-  (text-stroke: 1px rgb(255, 255, 255, 0.5)) or
-    (-webkit-text-stroke: 1px rgb(255, 255, 255, 0.5))
-) {
+@supports (-webkit-text-stroke: 1px black) or (text-stroke: 1px black) {
   .lable {
-    -webkit-text-stroke: 1px rgb(255, 255, 255, 0.5);
-    text-stroke: 1px rgb(255, 255, 255, 0.5);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+    text-stroke: 1px rgba(255, 255, 255, 0.5);
     text-shadow: none;
   }
 }
 
 .section {
   background-color: var(--background-color-page);
-  border: 2px solid black;
   max-width: clamp(var(--header-min-width), 90vw, var(--header-max-width));
   margin-block-end: 52px;
+  outline: 2px solid black;
 }
 
 .decor-lable {
   position: relative;
   aspect-ratio: 1 / 1;
-  height: 100%;
+  overflow: hidden;
+  /* outline: 2px solid black; */
 }
 
 .card-text_title {
   font-variation-settings: "wght" var(--font-weight-bold);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-card_title);
-  /* padding-block-start: 4px; */
-  padding-block-end: 6px;
-  padding-inline: 10px;
+  padding-block: 7px;
+  padding-inline-start: 10px;
   text-wrap: wrap;
   border-block-end: 2px solid black;
+  font-size: 18px;
+  line-height: 19px;
+  letter-spacing: 0%;
 }
 
 .card-text {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  margin: 25px;
+  border-block-start: 2px solid black;
   font-size: var(--font-size-card_title);
+  padding: 25px;
 }
 
 .card__like-button {
@@ -213,19 +222,18 @@ dialog button {
 .card__like-button:focus {
   outline: none; /* Отменяем стандартную обводку */
   box-shadow: 2px 2px 0px black; /* Тень сдвинута на 2px по X и Y, без размытия */
-  transition: box-shadow 0.3s ease-in-out; /* Плавность изменения тени */
 }
 
 .card__icon-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  align-self: end;
   border: none;
   background-color: #fff;
   padding: 0px;
   gap: 6px;
   cursor: pointer;
+  transition: border-color 0.3s ease-in-out;
   /* transition: border-color 0.3s ease-in-out;
   border: 2px solid transparent; */
 }
@@ -235,7 +243,7 @@ dialog button {
 }
 
 .card__icon-button:focus-visible {
-  border-color: black; /* Акцентный цвет обводки */
+  border: 2px solid black;
 }
 
 .heart {
@@ -246,29 +254,11 @@ dialog button {
   opacity: 0%;
 }
 
-/* .like-icon {
-} */
-
-/* Базовые стили */
-.like-icon:focus {
-  outline: none;
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  max-height: 38px;
-  border: 2px solid black;
-  border-radius: 0%;
-}
-
 .double_button {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-self: flex-end;
-  gap: 12px;
+  gap: 6px;
   align-items: center;
 }
 
@@ -281,7 +271,7 @@ dialog button {
   font-size: 14px;
   overflow: hidden;
   position: relative;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease-in-out; /* Плавность изменения тени */
 }
 
 .button:focus {
@@ -318,20 +308,33 @@ dialog button {
 
 .button_save {
   display: flex;
-  /* padding: 15px 20px 14px; */
   margin: auto;
   background-color: white;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 15px 19px;
-  gap: 10px;
-  width: 100%;
+  padding: 18.5px 21px;
+  width: fit-content;
+  height: 55px;
+  margin-block-end: 102px;
+  gap: 4px;
 }
 
-.icon-floppy {
-  color: white;
-  flex-shrink: 0;
+.modal-content .button_save {
+  width: 38px;
+}
+
+.modal-content .icon-floppy {
+  z-index: 1;
+  margin-inline-end: 4px;
+  min-width: 39px;
+  height: 39px;
+}
+
+.button_save-modal {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* Чтобы текст был поверх анимированного фона */
@@ -342,11 +345,6 @@ dialog button {
 
 .button_save .button__text {
   position: relative;
-  z-index: 1;
-}
-
-.footer {
-  margin-block-end: 100px;
   z-index: 1;
 }
 

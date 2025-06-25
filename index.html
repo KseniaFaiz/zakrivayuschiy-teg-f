@@ -21,12 +21,12 @@
     </header>
     <main>
       <article class="section">
-        <div class="card-text_title">
-          <h3>Фритрек и нулевой спринт: Подготовка к работе</h3>
-        </div>
+        <h2 class="card-text_title">
+          Фритрек и нулевой спринт: Подготовка к работе
+        </h2>
         <div class="decor-lable">
           <img
-            class="card-image card-image_0sprint"
+            class="card-image card-image_grayscale"
             src="./images/freedom.jpg"
             alt="спокойный котик"
             loading="lazy"
@@ -39,7 +39,10 @@
             основами и настроиться на учёбу. И, возможно, подумать, как новые
             знания могут повлиять на ваше будущее.
           </p>
-          <p>Это мой второй шанс стать настоящим программиистом. Начало пути и вытаскивание из памяти уже имеющихся мыслей.</p>
+          <p>
+            Это мой второй шанс стать настоящим программиистом. Начало пути и
+            вытаскивание из памяти уже имеющихся мыслей.
+          </p>
           <div class="double_button">
             <button class="card__icon-button" type="button">
               <svg
@@ -86,7 +89,7 @@
         </div>
         <div class="decor-lable">
           <img
-            class="card-image card-image_1sprintnull"
+            class="card-image card-image_blur"
             src="./images/clean_sheet.jpg"
             alt="белый котик"
             loading="lazy"
@@ -148,7 +151,7 @@
         </div>
         <div class="decor-lable">
           <img
-            class="card-image card-image_1sprintif"
+            class="card-image card-image_sepia"
             src="./images/If_possible.jpg"
             alt="котик с большими глазами"
             loading="lazy"
@@ -211,7 +214,7 @@
         </div>
         <div class="decor-lable">
           <img
-            class="card-image card-image_2sprintideal"
+            class="card-image card-image_saturate"
             src="./images/za_idealom.jpg"
             alt="идеальный котик"
             loading="lazy"
@@ -276,7 +279,7 @@
         </div>
         <div class="decor-lable">
           <img
-            class="card-image card-image_2sprintnear"
+            class="card-image card-image_invert"
             src="./images/kto_riadom.jpg"
             alt="Два котика"
             loading="lazy"
@@ -342,7 +345,7 @@
         </div>
         <div class="decor-lable">
           <img
-            class="card-image card-image_3sprintstrateg"
+            class="card-image card-image_contrast"
             src="./images/obhodnie_strategii.jpg"
             alt="Котик мякает"
             loading="lazy"
@@ -402,7 +405,7 @@
         </div>
         <div class="decor-lable">
           <img
-            class="card-image card-image_3sprinthands"
+            class="card-image card-image_hue-rotate"
             src="./images/i_have_pows.jpg"
             alt="лапка котика"
             loading="lazy"
@@ -468,7 +471,7 @@
         </div>
         <div class="decor-lable">
           <img
-            class="card-image card-image_imhere"
+            class="card-image card-image_brightness-blur"
             src="./images/im_here.jpg"
             alt="котик крутой в очках"
             loading="lazy"
@@ -529,32 +532,39 @@
         </div>
       </article>
     </main>
-    <footer class="footer">
-      <button
+          <button
         class="button_save button"
         type="button"
         onclick="document.getElementById('save-dialog').showModal()"
       >
-        <svg aria-hidden="true" class="icon-floppy" width="28" height="28" viewBox="0 0 40 40">
+        <svg
+          aria-hidden="true"
+          class="icon-floppy"
+          width="21"
+          height="21"
+          viewBox="0 0 40 40"
+        >
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
-    </footer>
     <dialog id="save-dialog">
       <div class="modal-content">
-        <svg aria-hidden="true" class="icon-floppy" width="40" height="40" viewBox="0 0 40 40">
+        <svg
+          aria-hidden="true"
+          class="icon-floppy"
+          width="39"
+          height="39"
+          viewBox="0 0 40 40"
+        >
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
-        <span>Вставьте дискету, чтобы продолжить</span>
+        <p>Вставьте дискету, чтобы продолжить</p>
       </div>
-      <div
-        class="button_save button"
-        onclick="document.getElementById('save-dialog').close()"
-      >
-        <button type="button">
-          <span class="button__text">OK</span>
-        </button>
+      <button type="button" class="button button_save-modal"
+        onclick="document.getElementById('save-dialog').close()">
+        <span class="button__text">OK</span>
+      </button>
       </div>
     </dialog>
     <script src="./scripts/like.js"></script>
