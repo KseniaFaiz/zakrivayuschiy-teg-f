@@ -16,6 +16,7 @@
   align-items: center;
   min-inline-size: 375px;
   min-block-size: 100dvb;
+  background-color: #fff;
   background-image: var(--background-gradient);
   background-size: cover;
   background-repeat: no-repeat;
@@ -46,6 +47,10 @@ dialog[open] {
 
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.75);
+}
+
+dialog.button__text {
+text-transform: uppercase;
 }
 
 .modal-content {
@@ -109,34 +114,34 @@ dialog button {
   aspect-ratio: 1/1;
 }
 
-.card-image_0sprint {
+.card-image_grayscale {
   filter: grayscale(100%);
 }
 
-.card-image_1sprintnull {
+.card-image_blur {
   filter: blur(7px);
 }
 
-.card-image_1sprintif {
+.card-image_sepia {
   filter: sepia(20%);
 }
 
-.card-image_2sprintideal {
+.card-image_saturate {
   filter: saturate(45%);
 }
 
-.card-image_2sprintnear {
+.card-image_invert {
   filter: invert(100%);
 }
 
-.card-image_3sprintstrateg {
+.card-image_contrast {
   filter: contrast(75%);
 }
 
-.card-image_3sprinthands {
+.card-image_hue-rotate {
   filter: hue-rotate(323deg);
 }
-.card-image_imhere {
+.card-image_brightness-blur {
   filter: brightness(5) blur(1px);
 }
 
@@ -168,8 +173,8 @@ dialog button {
 
 @supports (-webkit-text-stroke: 1px black) or (text-stroke: 1px black) {
   .lable {
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
-    text-stroke: 1px rgba(255, 255, 255, 0.5);
+    -webkit-text-stroke: 1px rgba(255, 255, 255);
+    text-stroke: 1px rgba(255, 255, 255);
     text-shadow: none;
   }
 }
@@ -195,7 +200,7 @@ dialog button {
   text-wrap: wrap;
   border-block-end: 2px solid black;
   font-size: 18px;
-  line-height: 19px;
+  line-height: 100%;
   letter-spacing: 0%;
 }
 
@@ -277,7 +282,7 @@ dialog button {
   font-size: 14px;
   overflow: hidden;
   position: relative;
-  transition: box-shadow 0.3s ease-in-out; /* Плавность изменения тени */
+  transition: box-shadow 0.3s ease; /* Плавность изменения тени */
 }
 
 .button:focus {
@@ -378,10 +383,6 @@ dialog button {
 
   .header_text {
     font-size: 14px;
-  }
-
-  .section {
-    border: 2px solid black;
   }
 
   .dialog {

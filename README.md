@@ -11,3 +11,5 @@ https://kseniafaiz.github.io/zakrivayuschiy-teg-f/
 (^ↀωↀ^)ฅ♡
 
 (=^-ω-^=)
+
+uppercase для кнопки диалога в классе button_save-modal
