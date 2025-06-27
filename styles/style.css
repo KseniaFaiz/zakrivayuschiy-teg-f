@@ -50,7 +50,7 @@ dialog::backdrop {
 }
 
 dialog.button__text {
-text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .modal-content {
@@ -63,6 +63,8 @@ text-transform: uppercase;
 
 .modal-content p {
   font-size: 14px;
+  text-transform: uppercase;
+  line-height: 150%;
 }
 
 dialog button {
@@ -147,7 +149,6 @@ dialog button {
 
 .lable {
   position: absolute;
-  inset-inline-end: 25px;
   font-family: var(--font-accent);
   font-size: 14px;
   line-height: 100%;
@@ -160,15 +161,6 @@ dialog button {
   z-index: 1;
   inset-block-start: 25px;
   inset-inline-end: 25px;
-  /* inset-block-start: 25px;
-  inset-inline-end: 25px;
-  font-family: var(--font-accent);
-  font-size: 14px;
-  color: white; 
-  z-index: 1;
-  /* text-shadow: 1px 1px 0.5px white; 
-  opacity: 0.5;
-  mix-blend-mode: hard-light; */
 }
 
 @supports (-webkit-text-stroke: 1px black) or (text-stroke: 1px black) {
